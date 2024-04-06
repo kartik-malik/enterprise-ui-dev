@@ -1,0 +1,19 @@
+name: Unit test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout out to repo
+      - uses: actions/checkout@v4
+      - name: Node
+      - uses: actions/setup-node@v4
+      - run: npm ci
+      - run: npm run build
