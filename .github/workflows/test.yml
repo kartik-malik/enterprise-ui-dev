@@ -16,7 +16,6 @@ jobs:
         uses: actions/setup-node@v3
       - run: npm ci
       - run: npm run test:all
-jobs:
   build-and-test:
     runs-on: ubuntu-latest
 
