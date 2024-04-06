@@ -14,6 +14,6 @@ jobs:
       - name: Checkout out to repo
       - uses: actions/checkout@v4
       - name: Node
-      - uses: actions/setup-node@v4
+        uses: actions/setup-node@v4
       - run: npm ci
       - run: npm test
