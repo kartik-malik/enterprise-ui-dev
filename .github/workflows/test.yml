@@ -16,7 +16,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
       - name: Caching action
-      - uses: actions/caches@v3
+        uses: actions/caches@v3
         id: cache-npm
         with:
           path: ~/.npm
