@@ -15,6 +15,12 @@ jobs:
         name: Checkout Repo
       - uses: actions/setup-node@v3
         name: Setup Node
+      - uses: actions/cache@v3
+        name: Caching action
+        id: cache-npm
+        with:
+          path: ~/.npm
+          key: npm-${{ hashFiles('**/packages-lock.json') }}
       - run: npm ci
       - run: npm run test:all
   build-and-test:
