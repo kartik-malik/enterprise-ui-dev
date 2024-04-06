@@ -18,6 +18,5 @@ jobs:
     needs: install-and-setup
 
     steps:
-     - name: Test
      - run: npm ci
      - run: npm run test:all
