@@ -1,4 +1,4 @@
-name: Unit test
+name: Unit Tests
 
 on:
   push:
@@ -7,13 +7,12 @@ on:
     branches: [main]
 
 jobs:
-  build:
+  build-and-test:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout out to repo
-      - uses: actions/checkout@v4
-      - name: Node
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v3
+      - name: Setup Node
+        uses: actions/setup-node@v3
       - run: npm ci
-      - run: npm run build
+      - run: npm test
