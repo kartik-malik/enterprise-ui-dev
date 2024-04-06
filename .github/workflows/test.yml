@@ -20,7 +20,7 @@ jobs:
         id: cache-npm
         with:
           path: ~/.npm
-          key: npm-${{ hashFiles('**/packages-lock.json') }}
+          key: npm-${{ hashFiles('**/package-lock.json') }}
       - run: npm ci
       - run: npm run test:all
   build-and-test:
@@ -35,6 +35,6 @@ jobs:
         id: cache-npm
         with:
           path: ~/.npm
-          key: npm-${{ hashFiles('**/packages-lock.json') }}
+          key: npm-${{ hashFiles('**/package-lock.json') }}
       - run: npm ci
       - run: npm run build
