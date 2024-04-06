@@ -24,11 +24,5 @@ jobs:
       - uses: actions/checkout@v3
       - name: Setup Node
         uses: actions/setup-node@v3
-      - name: Caching action
-        uses: actions/cache@v3
-        id: cache-npm
-        with:
-          path: ~/.npm
-          key: npm-${{ hashFiles('**/packages-lock.json') }}
       - run: npm ci
       - run: npm run build
