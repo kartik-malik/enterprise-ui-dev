@@ -45,7 +45,7 @@ jobs:
           node-version: 18
       - run: npm ci
       - run: npm run test -- --coverage
-      - uses: actions/upload-artifacts@v4
+      - uses: actions/upload-artifact@v4
         name: generate coverage
         with:
           name: coverage
