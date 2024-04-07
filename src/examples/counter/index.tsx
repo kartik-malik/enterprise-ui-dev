@@ -17,16 +17,14 @@ const Counter = ({ initialCount = 0 }: CounterProps) => {
         {count}
       </div>
       <div className="flex justify-center gap-4">
-        <button className="btn-danger" name="reset" onClick={() => setCount(0)}>
+        <button className="btn-danger" name="reset" onClick={() => setCount(initialCount)}>
           Reset
         </button>
         <button
           className="btn-primary"
-          name="increment"
           onClick={() => setCount((n) => n + 1)}
-        >
-          Increment
-        </button>
+        >Increment</button>
+         
       </div>
     </Frame>
   );
